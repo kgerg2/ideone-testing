@@ -21,7 +21,6 @@ public class TestBase {
     protected static String username;
     protected static String password;
     protected static String email;
-    protected static String emailApiKey;
     protected static Map<String, String> programs;
     protected static Map<String, String> titles;
 
@@ -34,7 +33,6 @@ public class TestBase {
         username = properties.getProperty("ideone.username");
         password = properties.getProperty("ideone.password");
         email = properties.getProperty("mailsac.email");
-        emailApiKey = properties.getProperty("mailsac.api_key");
 
         programs = (Map<String, String>) properties.entrySet().stream()
                 .filter(entry -> entry.getKey().toString().startsWith("programs."))
